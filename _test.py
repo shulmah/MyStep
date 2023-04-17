@@ -1,3 +1,21 @@
+# Программа получает на вход два числа
+# Создать массив  A[n][m] и 
+# заполнить Змейкой
+
+n,m= map(int, input().split())
+s = []
+
+for i in range(n):
+    if i % 2 == 0:
+        for j in range(i*m, i*m + m):
+            s.append(j)
+    else:
+        for j in range((i+1)*m -1, i*m -1, -1):
+            s.append(j)
+for i in range(n):
+    print(*s[(i*m): (i*m + m)])
+
+
 # input().split() # целые числа как суб-строки, раздел-ные пробелом 
 # n,m = map(int, input().split()) #  ввод 2-х чисел через пробел
 # lst = list(map(int, input().split())) # ввод чисел через проб в списok
