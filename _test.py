@@ -1,7 +1,4 @@
 
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDuLcZXiDHo9IbV7vOtLZ9mtAGnE9DowxOw0go+fsjzE shulmah@gmail.com
-
-
 # Программа получает на вход два числа
 # Создать массив  A[n][m] и 
 # заполнить Змейкой
