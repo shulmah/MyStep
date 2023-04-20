@@ -3,8 +3,8 @@
 # Создать массив  A[n][m] и 
 # заполнить Змейкой
 
-n,m= map(int, input().split())
-s = []
+#n,m= map(int, input().split())
+#s = []
 
 
 
