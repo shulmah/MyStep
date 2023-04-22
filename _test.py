@@ -3,10 +3,17 @@
 # Создать массив  A[n][m] и 
 # заполнить Змейкой
 
-n,m= map(int, input().split())
-s = []
+n,m= map(int, input('n,m: ').split())
+matr=[]; b=[]; s = []
 
-
+for i in range(n): # create [0]-matrix
+    matr.append([0]*m)
+    
+for i in range(n): #print [0]-matrix
+    for j in range(m):
+        print(matr[i][j], end=' ')
+    print()
+   
 
 # input().split() # целые числа как суб-строки, раздел-ные пробелом 
 # n,m = map(int, input().split()) #  ввод 2-х чисел через пробел
