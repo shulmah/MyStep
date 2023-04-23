@@ -45,4 +45,6 @@ sk = [list(map(str,'-'.split()*m)) for i in range(n)]
 
 print('sk=', so) 
 
+oauth_token: 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
 
+    user: shulmah
