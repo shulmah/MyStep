@@ -5,7 +5,7 @@
 
 n,m= map(int, input('n,m: ').split())
 matr=[]; c = 1
-y, x = 0, -1
+y, x = 0, -1  # start-point
 dy, dx = 0, 1 # step ^ step >
 
 for i in range(n): # create [0]-matrix
@@ -16,7 +16,7 @@ for i in range(n): #print [0]-matrix
         print(matr[i][j], end=' ')
     print()
    
-while c <= n* m:
+while c <= n * m:
   if 0<=y+dy<n and 0<=x+dx<m and matr[y+dy][x+dx]==0:
     y += dy
     x += dx
