@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Программа получает на вход два числа
 # Создать массив  A[n][m] и 
 # заполнить спиралью
@@ -40,3 +41,10 @@ for i in range(n): #print n*m-matrix
         print(matr[i][j], end=' ')
     print()
                
+=======
+
+oauth_token: gho_u9gvfeURy6zaI9KaiEqlWKiBvC0QCr2qJwc    user: shulmah
+
+
+
+>>>>>>> fix-code
