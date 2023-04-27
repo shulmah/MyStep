@@ -1,42 +1,28 @@
-# Программа получает на вход два числа
-# Создать массив  A[n][m] и 
-# заполнить спиралью
+'''Входные данные
+Первая строка содержит два целых числа 
+ r и c (2 ≤ r,c ≤ 10), обозначающих количество строк и количество столбцов в торте. Следующие r строк содержат по c символов — j-ый символ i-ой строки обозначает содержимое ячейки в строке i и столбце j, и имеет одно из следующих значений:
+символ '.' обозначает ячейку торта без гадкой клубнички;
+символ 'S' обозначает ячейку торта с гадкой клубничкой.
 
-n,m= map(int, input('n,m: ').split())
-matr=[]; c = 1
-y, x = 0, -1  # point-start
-dy, dx = 0, 1 # step ^ step >
+Выходные данные
+Выведите максимальное количество ячеек торта, которые может съесть тортминатор '''
 
-for i in range(n): # create [0]-matrix
-    matr.append([0]*m)
+r,c = map(int, input('r',c: ').split())
+matr=[]; a = 1
+
+for i in range(r): # create [0]-matrix
+    matr.append([input()]*c)
     
-for i in range(n): #print [0]-matrix
-    for j in range(m):
+for i in range(r): #print [0]-matrix
+    for j in range(c):
         print(matr[i][j], end=' ')
     print()
    
-while c <= n* m:
-  if y+dy in range(n) and x+dx in range(m) and matr[y+dy][x+dx]==0:
-    y += dy
-    x += dx
-    matr[y][x] = c
-    c += 1
-  elif dx == 1:
-    dx = 0
-    dy = 1
-  elif dy == 1:
-    dy = 0
-    dx = -1
-  elif dx == -1:
-    dx = 0
-    dy = -1
-  elif dy == -1:
-    dy = 0
-    dx = 1
+
 
 print() 
-for i in range(n): #print n*m-matrix
-    for j in range(m):
+for i in range(r): #print n*m-matrix
+    for j in range(c):
         print(matr[i][j], end=' ')
     print()
                
