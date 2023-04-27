@@ -7,22 +7,27 @@
 Выходные данные
 Выведите максимальное количество ячеек торта, которые может съесть тортминатор '''
 
-r,c = map(int, input('r',c: ').split())
-matr=[]; a = 1
+'''r,c: 2 3      при условии r,c:== 2 3,
+qwertyui    даже если в входн.строках
+asdfg         больше букв, блок прог-мы
+q w e        # input(matr) берет только по
+a s d       3 буквы из кажд. строки  
+[Program finished]'''
 
-for i in range(r): # create [0]-matrix
-    matr.append([input()]*c)
-    
-for i in range(r): #print [0]-matrix
-    for j in range(c):
-        print(matr[i][j], end=' ')
-    print()
-   
+r,c = map(int, input('r,c: ').split())
+matr=[]
+a = []
+###   input(matr)  ###
+for i in range(r): 
+  matr.append(input())
+  
+  
+  
+for i in range(r): # print(matr)
+  for j in range(c):
+    print(matr[i][j], end=' ')
+  print()
 
 
-print() 
-for i in range(r): #print n*m-matrix
-    for j in range(c):
-        print(matr[i][j], end=' ')
-    print()
-               
+
+
