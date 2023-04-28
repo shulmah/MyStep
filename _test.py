@@ -14,37 +14,44 @@ q w e   # print(matr) # выдает только
 a s d     по 3 буквы в кажд. строку
 [Program finished]'''
 
-#r,c = map(int, input('r,c: ').split())
-#matr=[]
-#for i in range(r): #   input(matr)  #
-#  matr.append(input())
-
+r,c = map(int, input('r,c: ').split())
+matr=[]
+for i in range(r): #   input(matr)  #
+  matr.append(input())
+print(matr)
 #  breakpoint() # debugger
 
 ar = []; ac = []
-r, c = 4, 5 
-matr =[['.', 's', '.', '.', 's'], 
-       ['.',  '.', '.', '.', '.'], 
-       ['.', 's', '.', 's', '.'], 
-       ['.', '.', '.', '.', '.'] ]
+#r, c = 8,9
+#matr =[['.', '.', '.', '.', '.', '.', '.', '.', '.'], 
+#             ['.', '.', '.', '.', '.', '.', '.', '.', '.'], 
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.'],
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.'],
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.'], 
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.'],
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.'],
+#             ['s', '.', '.', '.', '.', '.', '.', '.', '.']]
+print(r,'*',c)
 
 for i in range(r):   # сосчитать ск.откр.
     for j in range(c):  # строк и столбов
         if matr[i][j] == 's':
             ar.append(i)
             ac.append(j)
-print('len arow =', r- len(set(ar)))
-print('len acolumn =', c- len(set(ac)))
+print('ar =', ar)
+print('ac =', ac)
+print('open arow =', r- len(set(ar)))
+print('open column =', c- len(set(ac)))
 
 ''' полу-н ответ кол.строк по 'с'-клеток
-и кол.столбов по 'r'-клеток. Осталось перемножить и сложить''' 
-rez= (r- len(set(ar)))*c + (c- len(set(ac)))*r
+и кол.столбов по 'r'-клеток. Осталось перемножить, сложить и вычесть''' 
+
+rez= (r- len(set(ar)))*c + (c- len(set(ac)))*r - (c - len(set(ac)))*(r - len(set(ar)))
 print('all rezult =', rez)
 print()
 
 #  print(matr)  #
 for i in range(r): 
-
   for j in range(c):
     print(matr[i][j], end=' ')
   print()
