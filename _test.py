@@ -10,8 +10,8 @@
 '''r,c: 2 3      при условии r,c:== 2 3,
 qwertyui    даже если в входн.строках
 asdfg         больше букв, блок прог-мы
-q w e       # print(matr) #  выдает только
-a s d         по 3 буквы в кажд. строку
+q w e   # print(matr) # выдает только 
+a s d     по 3 буквы в кажд. строку
 [Program finished]'''
 
 #r,c = map(int, input('r,c: ').split())
@@ -19,18 +19,32 @@ a s d         по 3 буквы в кажд. строку
 #for i in range(r): #   input(matr)  #
 #  matr.append(input())
 
+#  breakpoint() # debugger
+
 ar = []; ac = []
 r, c = 4, 5 
-matr = [['.', 's', '.', '.', 's'], 
-        ['.', '.', '.', '.', '.'], 
-        ['.', 's', '.', 's', '.'], 
-        ['.', '.', '.', '.', '.'] ]
+matr =[['.', 's', '.', '.', 's'], 
+       ['.',  '.', '.', '.', '.'], 
+       ['.', 's', '.', 's', '.'], 
+       ['.', '.', '.', '.', '.'] ]
 
+for i in range(r):   # сосчитать ск.откр.
+    for j in range(c):  # строк и столбов
+        if matr[i][j] == 's':
+            ar.append(i)
+            ac.append(j)
+print('len arow =', r- len(set(ar)))
+print('len acolumn =', c- len(set(ac)))
+
+''' полу-н ответ кол.строк по 'с'-клеток
+и кол.столбов по 'r'-клеток. Осталось перемножить и сложить''' 
+rez= (r- len(set(ar)))*c + (c- len(set(ac)))*r
+print('all rezult =', rez)
+print()
 
 #  print(matr)  #
 for i in range(r): 
-#  breakpoint() # debugger in python
+
   for j in range(c):
     print(matr[i][j], end=' ')
   print()
-  
